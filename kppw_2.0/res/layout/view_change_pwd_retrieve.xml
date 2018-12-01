@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="@string/reg_phone"
+                android:textColor="@color/light_gray8" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@color/main_bg"
+                android:ems="11"
+                android:inputType="phone"
+                android:maxLength="11" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/light_gray2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp" >
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="@string/reg_pin"
+                android:textColor="@color/light_gray8" />
+
+            <EditText
+                android:id="@+id/edit_pin"
+                android:layout_width="107dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_weight="1"
+                android:background="@color/main_bg"
+                android:ems="10"
+                android:inputType="number" />
+
+            <TextView
+                android:id="@+id/btn_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:gravity="center_vertical"
+                android:text="@string/reg_getpin"
+                android:textColor="@color/header_bg" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/light_gray2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="@string/new_password"
+                android:textColor="@color/light_gray8" />
+
+            <EditText
+                android:id="@+id/edit_newpwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@color/main_bg"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/light_gray2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp" >
+
+            <TextView
+                android:id="@+id/textView6"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="@string/confirm_password"
+                android:textColor="@color/light_gray8" />
+
+            <EditText
+                android:id="@+id/edit_repwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@color/main_bg"
+                android:ems="10"
+                android:inputType="textPassword" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView1224"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@color/light_gray2" />
+    </LinearLayout>
+
+</LinearLayout>

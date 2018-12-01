@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray2"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/heaher_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_light" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/main_bg"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/textView4"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="银行名称" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray6" />
+
+            <TextView
+                android:id="@+id/text_bank_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView13"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/light_gray6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/textView15"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="开户地址" />
+
+            <TextView
+                android:id="@+id/textView22"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray6" />
+
+            <TextView
+                android:id="@+id/text_bank_name2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/light_gray6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/textView5"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="银行账号" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray6" />
+
+            <TextView
+                android:id="@+id/text_bank_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:text="TextView" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="4dp"
+            android:background="@color/light_gray6" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp" >
+
+            <TextView
+                android:id="@+id/textView33"
+                style="@style/task_releaes"
+                android:layout_width="88dp"
+                android:layout_height="match_parent"
+                android:text="核对金额" />
+
+            <TextView
+                android:id="@+id/textView31"
+                android:layout_width="0.5dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:background="@color/light_gray6" />
+
+            <EditText
+                android:id="@+id/edit_bank_cash"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:background="@color/main_bg"
+                android:ems="10"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="@color/main_bg"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@color/header_bg"
+                android:text="提交"
+                android:textColor="@color/main_bg" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginTop="36dp"
+            android:textColor="@color/light_gray3"
+            android:text="你需要查询银行卡的收支明细单，正确的输入这笔金额才能通过认证，若还没收到款项请耐心等待" />
+    </RelativeLayout>
+
+</LinearLayout>

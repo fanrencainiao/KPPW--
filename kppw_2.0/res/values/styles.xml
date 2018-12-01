@@ -1,0 +1,81 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+
+
+    <!-- Application theme. -->
+    <style name="AppTheme" parent="android:Theme.Holo.Light">
+
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowBackground">@color/main_bg</item>
+        <item name="android:textSize">16sp</item>
+        <!-- 设置activity切换动画 -->
+        <item name="android:windowAnimationStyle">@style/activityAnimation</item>
+        <!-- 页面全屏 -->
+        <item name="android:windowTranslucentStatus">true</item>
+        <!--
+        状态栏字体深色
+        <item name="android:windowLightStatusBar">true</item>
+        底部虚拟按键
+        <item name="android:windowTranslucentNavigation">true</item>
+        -->
+    </style>
+
+    <!-- animation 样式 -->
+    <style name="activityAnimation" parent="@android:style/Animation">
+        <!--
+        <item name="android:activityOpenEnterAnimation">@anim/slide_right_in</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_left_out</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_left_in</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_right_out</item>
+        -->
+    </style>
+
+    <!-- 任务发布 -->
+    <style name="task_releaes">
+        <item name="android:textColor">@color/task_releaes</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+    </style>
+
+    <style name="btn_style">
+        <item name="android:textColor">@color/main_bg</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/ic_button_submit</item>
+    </style>
+
+    <!-- 星星 -->
+    <style name="MyRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@anim/food_rating_bar_full</item>
+        <item name="android:minHeight">18dip</item>
+        <item name="android:maxHeight">32dip</item>
+    </style>
+
+    <!-- 文本框 -->
+    <style name="edit_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@color/main_bg</item>
+    </style>
+
+    <!-- 登录注册文本框 -->
+    <style name="edit_login_style">
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@color/main_bg</item>
+        <item name="android:paddingLeft">8dp</item>
+    </style>
+
+    <style name="customProgressBar" parent="@android:style/Widget.ProgressBar.Small">
+        <item name="android:indeterminateDrawable">@drawable/custom_progress_bar</item>
+        <item name="android:layout_width">21dip</item>
+        <item name="android:layout_height">21dip</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+</resources>

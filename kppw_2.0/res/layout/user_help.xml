@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/heaher_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_light" />
+
+    <com.kekezu.kppw.control.RTPullListView
+        android:id="@+id/pullListView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="@color/light_gray2"
+        android:dividerHeight="12dp"
+        android:scrollbars="none" >
+    </com.kekezu.kppw.control.RTPullListView>
+
+    <RelativeLayout
+        android:id="@+id/layout_user_opinion"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/header_bg" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:textSize="17sp"
+            android:textColor="@color/main_bg"
+            android:layout_marginLeft="11dp"
+            android:text="我要反馈" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/textView1"
+            android:src="@drawable/help_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>

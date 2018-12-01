@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/heaher_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_light" />
+
+    <com.kekezu.kppw.pullrefresh.PullToRefreshMenuView
+        android:id="@+id/refreshlistview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:overScrollMode="never"
+        android:requiresFadingEdge="none" 
+        android:scrollbars="none"
+        android:divider="@color/light_gray2">
+    </com.kekezu.kppw.pullrefresh.PullToRefreshMenuView>
+
+</LinearLayout>

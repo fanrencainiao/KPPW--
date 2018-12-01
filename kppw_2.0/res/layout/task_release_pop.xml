@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/img_release"
+        android:layout_width="48dp"
+        android:layout_height="36dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:src="@drawable/tab_fabunull" />
+
+    <LinearLayout
+        android:id="@+id/lay_xuanshang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/lay_zhaobiao"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@+id/img_release"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_service"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/task_1" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center_horizontal"
+            android:text="悬赏"
+            android:textColor="@color/main_bg" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lay_zhaobiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/img_release"
+        android:layout_marginBottom="59dp"
+        android:layout_marginRight="5dp"
+        android:layout_toLeftOf="@+id/img_release"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:id="@+id/img_good"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/task_2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="13dp"
+            android:gravity="center_horizontal"
+            android:text="招标"
+            android:textColor="@color/main_bg" />
+    </LinearLayout>
+
+</RelativeLayout>

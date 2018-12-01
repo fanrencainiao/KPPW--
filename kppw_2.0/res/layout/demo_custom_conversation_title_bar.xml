@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_title_bar"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/aliwx_title_bar_height"
+    android:background="@color/light_gray2"
+    android:gravity="center_vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp" >
+
+        <TextView
+            android:id="@+id/left_button"
+            style="@style/aliwx_common_title_left_btn_shadow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="middle"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:paddingLeft="90dp"
+            android:paddingRight="90dp"
+            android:singleLine="true" />
+
+        <TextView
+            android:id="@+id/right_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:paddingRight="12dip"
+            android:text="@string/mark_all_read"
+            android:textColor="@color/black" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray2"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/heaher_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/header_light" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/main_bg"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/task_releaes"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
+                    android:text="银行名称" />
+
+                <TextView
+                    android:id="@+id/textView20"
+                    android:layout_width="0.5dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@color/light_gray6" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/light_gray6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/textView15"
+                    style="@style/task_releaes"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
+                    android:text="开户地址" />
+
+                <TextView
+                    android:id="@+id/textView22"
+                    android:layout_width="0.5dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@color/light_gray6" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/light_gray6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/textView6"
+                    style="@style/task_releaes"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
+                    android:text="个企名称" />
+
+                <TextView
+                    android:id="@+id/textView30"
+                    android:layout_width="0.5dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@color/light_gray6" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="TextView" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView116"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:background="@color/light_gray6" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="48dp" >
+
+                <TextView
+                    android:id="@+id/textView33"
+                    style="@style/task_releaes"
+                    android:layout_width="88dp"
+                    android:layout_height="match_parent"
+                    android:text="银行账号" />
+
+                <TextView
+                    android:id="@+id/textView31"
+                    android:layout_width="0.5dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:background="@color/light_gray6" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/linearLayout1"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/ic_yrz" />
+    </RelativeLayout>
+
+</LinearLayout>

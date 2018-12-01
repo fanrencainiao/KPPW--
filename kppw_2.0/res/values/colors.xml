@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="main_bg">#ffffff</color>
+    <color name="button_blue">#1d8ae7</color>
+    <color name="light_gray">#9b9b9b</color>
+    <color name="header_bg">#1d8ae7</color>
+    <color name="hot_server">#ee5568</color>
+    <color name="light_gray2">#f5f5f5</color>
+
+    <!-- 任务页面 -->
+    <!-- 任务状态列表灰字 -->
+    <color name="light_gray3">#e1e1e1</color>
+    <!-- 任务状态列表背景 -->
+    <color name="light_gray4">#e9edee</color>
+    <!-- 任务状态列表蓝字 -->
+    <color name="light_blue2">#2f55a0</color>
+    <!-- 无任务提示 -->
+    <color name="light_gray5">#cecece</color>
+
+    <!-- 底部分割线 -->
+    <color name="light_gray6">#dfe0e2</color>
+
+    <!-- 服务商 item成交量和好评 -->
+    <color name="index_list_item">#f18101</color>
+    <color name="index_list_item2">#FEF0E6</color>
+
+    <!-- 服务商 item成交量和好评 -->
+    <color name="task_releaes">#181818</color>
+    <color name="light_gray7">#abacb0</color>
+    <color name="light_gray8">#a2a2a2</color>
+    <color name="light_gray9">#808483</color>
+    <color name="light_gray10">#d3d3d3</color>
+    <color name="black"> #000000</color>
+    <color name="txt_color">#999</color>
+    <color name="txt_red">#cf4844</color>
+    <color name="text_1"> #ED817E</color>
+    <color name="tab_light">#666666</color>
+    <color name="tab_light2">#333333</color>
+
+    <!-- 人才列表标签底色 -->
+    <color name="tag_down">#eaf8ff</color>
+    <color name="white">#ffffffff</color>
+    <color name="third_text_color">#999999</color>
+    <color name="dian">#fe902a</color>
+    <color name="pop">#fa282828</color>
+    <color name="white_1">#00000000</color>
+    <color name="task_1">#ffbc42</color>
+    <color name="task_2">#ffe5e5</color>
+    <color name="task_3">#d7ffed</color>
+    <color name="task_4">#ffebd5</color>
+    <color name="task_text2">#fd413f</color>
+    <color name="task_text3">#00c269</color>
+    <color name="task_text4">#ff9013</color>
+    <color name="result_view">#b0000000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="possible_result_points">#c0ffff00</color>
+
+</resources>

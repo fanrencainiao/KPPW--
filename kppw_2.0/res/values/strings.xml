@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">昊良企业帮</string>
+    <string name="download_url">http://www.kppw.cn/download/KPPW.apk</string>
+    <!-- <string name="service_url">https://demo.kppw.cn/api/</string> -->
+    <string name="service_url">http://testkppw.135store.com/api/</string>
+    <string name="db_name">kppw3_db</string>
+    <!-- 授权码 -->
+    <string name="sign">fppDWs0qaoNPIstEXTM17ZlF0E5nHv8nw4+KWcbjuj07FivqAS4/9sij+EfECRsCrRRhP/7ftNp6HyyzIEFqmBlu3dG44UFA7+i73eskEFusJCYe56bGHBTsw4uZV1O/orSezTUOchvmtbXwQLJ/mxjaf7opH39ZguNAQPZr8cc=</string>
+
+    <!-- 登录 -->
+    <string name="action_settings">Settings</string>
+    <string name="user_name">手机号或用户名</string>
+    <string name="user_pwd">密码</string>
+    <string name="user_login">登录</string>
+    <string name="user_register">注册账号</string>
+    <string name="user_retrieve_pwd">找回密码</string>
+    <string name="user_visitor">游客登录</string>
+    <string name="old_password">原始密码</string>
+    <string name="new_password">新的密码</string>
+    <string name="confirm_password">确认密码</string>
+
+    <!-- 注册 -->
+    <string name="reg_phone">手机号</string>
+    <string name="reg_pwd">密码</string>
+    <string name="reg_pin">验证码</string>
+    <string name="reg_getpin">获取验证码</string>
+    <string name="reg_in">注册</string>
+    <string name="reg_next">下一步</string>
+    <string name="reg_ok">完成</string>
+    <string name="reg_pwd_1">输入新密码</string>
+    <string name="reg_pwd_2">再输入一次</string>
+    <!-- 首页 -->
+    <string name="index_hot">热门服务</string>
+
+    <!-- 搜索 -->
+    <string name="search_in">搜索</string>
+    <string name="search_keyword">关键字</string>
+
+    <!-- 发布 -->
+    <string name="task_releaes_title">发布任务</string>
+    <string name="task_release">发布</string>
+    <string name="task_draft">草稿</string>
+
+    <!-- 任务状态 -->
+    <string name="task_all">全部</string>
+    <string name="task_working">工作中</string>
+    <string name="task_select">选稿中</string>
+    <string name="task_deliver">交付中</string>
+    <string name="task_end">已结束</string>
+
+    <!-- 任务列表 -->
+    <string name="task_money">悬赏金额：￥ </string>
+
+    <!-- 提示 -->
+    <string name="task_null">亲，你还没有发不过任务哦！</string>
+
+    <!-- 任务发布 -->
+    <string name="task_title">标题</string>
+    <string name="task_describe">任务描述</string>
+    <string name="task_industry">行业</string>
+    <string name="task_budget">预算</string>
+    <string name="task_win_number">中标人数</string>
+    <string name="task_address">所在地区</string>
+    <string name="task_dates">开始时间</string>
+    <string name="task_date">截稿时间</string>
+    <string name="task_submit">确认发布</string>
+    <string name="task_title_hint">任务标题</string>
+    <string name="task_budget_hint">输入您的预算</string>
+
+    <!-- 定位 -->
+    <string name="dingwei">定位</string>
+    <string name="dingwei_city">定位城市</string>
+    <string name="dingwei_now">正在定位所在城市..</string>
+    <string name="task_good">好评度：</string>
+    <string name="task_count">完成任务：</string>
+    <string name="manuscript_content">稿件内容：</string>
+
+    <!-- 我的 -->
+    <string name="user_my">我的</string>
+    <string name="user_grade">等级：</string>
+    <string name="user_task_count">发布任务：</string>
+    <string name="user_payment_speed">付款速度：</string>
+    <string name="user_cooperative">合作友好：</string>
+    <string name="user_my_wallet">我的钱包</string>
+    <string name="user_balance">余额</string>
+    <string name="user_information">基本信息</string>
+    <string name="user_security">账号</string>
+    <string name="user_task_collection">收藏</string>
+    <string name="user_case">我的案例</string>
+    <string name="user_tag">个人标签</string>
+    <string name="user_opinion">亲，请留下您的宝贵建议</string>
+    <string name="user_help">帮助</string>
+    <string name="user_witkey">切换威客</string>
+    <string name="user_employer">切换雇主</string>
+
+    <!-- 系统设置 -->
+    <string name="set_push">系统推送</string>
+    <string name="clear_cache">清除缓存</string>
+    <string name="about_us">关于</string>
+    <string name="check_updates">检查更新</string>
+    <string name="exit_login">退出登录</string>
+
+    <!-- 个人信息 -->
+    <string name="user_information_conserve">保存</string>
+    <string name="user_information_image">头像</string>
+    <string name="user_information_nickname">用户名</string>
+    <string name="user_information_qq">QQ</string>
+    <string name="user_information_weixin">微信</string>
+    <string name="user_information_email">邮箱</string>
+
+    <!-- 账号安全 -->
+    <string name="user_security_login_pwd_change">修改密码</string>
+    <string name="user_security_wallet_password">钱包密码</string>
+    <string name="user_security_identity_auto">身份认证</string>
+    <string name="user_security_bank_auto">银行认证</string>
+    <string name="user_security_alipay_auto">支付宝认证</string>
+
+    <!-- 实名认证 -->
+    <string name="identity_person">个人实名认证</string>
+    <string name="identity_company">公司实名认证</string>
+    <string name="identity_region">所在地区</string>
+    <string name="identity_type">认证类型</string>
+    <string name="identity_real_name">真实姓名</string>
+    <string name="identity_id_number">证件号码</string>
+    <string name="identity_photo">上传照片</string>
+    <string name="id_number">身份证</string>
+
+    <!-- 我的钱包 -->
+    <string name="user_wallet_balance">钱包余额</string>
+    <string name="user_wallet_recharge">充值</string>
+    <string name="user_wallet_cash">提现</string>
+    <string name="classify_list">分类列表</string>
+    <string name="classify_show">分类展示</string>
+
+    <!-- 银行卡认证 -->
+    <string name="bank_auto_not">未认证</string>
+    <string name="bank_auto_tobe">待认证</string>
+    <string name="bank_auto_ok">已认证</string>
+    <string name="bank_auto_bangding">银行卡绑定</string>
+    <string name="alipay_auto_bangding">支付宝绑定</string>
+    <string name="alipay_auto">申请认证</string>
+    <string name="certification_hint">申请认证后，系统将会在1-2个工作日内给您的账号中支付一笔款项，请注意查收。</string>
+    <string name="alipay_cash_hint">您需要查询支付宝的收支明细，正确输入这笔金额才能通过认证</string>
+    <string name="pull_to_refresh">下拉刷新</string>
+    <string name="app_tip">提示</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+
+    <!-- 自定义组件 -->
+    <string name="release_to_refresh">松开可以刷新</string>
+    <string name="lastUpdateTime">最近更新：%s</string>
+    <string name="load_full">已加载全部</string>
+    <string name="no_data">暂无数据</string>
+    <string name="more">加载中</string>
+    <string name="d">图片描述</string>
+    <string name="updating">最近更新：</string>
+    <string name="refreshing">正在刷新</string>
+    <string name="mark_all_read">全部已读</string>
+    <string name="cancel">取消</string>
+    <string name="demo_copy">复制</string>
+    <string name="demo_delete">删除消息</string>
+    <string name="demo_forward">转发</string>
+    <string name="check_new_version">检测到有新版本，是否更新?</string>
+    <string name="update">更新</string>
+    <string name="not_update">暂不更新</string>
+    <string name="tips">提示</string>
+    <string name="scan_text">将二维码放入框内, 即可自动扫描</string>
+
+     <string name="moreservice">更多企业孵化服务</string>
+    
+    <string-array name="outtabs">
+      
+        <item>政府公共服务</item>
+        <item>社会化服务</item>
+        <item>电商专题</item>
+        <item>孵化帮手</item>
+        <item>非公党建</item>
+        <item>新闻公告</item>
+        <item>园区服务</item>
+    </string-array>
+    
+    <string-array name="outlinks">
+        <item>http://testkppw.135store.com/government</item>
+        <item>http://testkppw.135store.com/social</item>
+        <item>http://testkppw.135store.com/ecommence</item>
+        <item>http://testkppw.135store.com/incubation</item>
+        <item>http://testkppw.135store.com/cpc_article</item>
+        <item>http://testkppw.135store.com/article</item>
+        <item>http://testkppw.135store.com/park</item>
+    </string-array>
+
+</resources>

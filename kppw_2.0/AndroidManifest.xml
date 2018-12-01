@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kekezu.kppw"
+    android:versionCode="1"
+    android:versionName="2.0.0" >
+
+    <!-- OpenGLES 2.0 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <!-- 阿里移动推送相关权限 -->
+    <!-- Android 6.0版本可去除，用于选举信息（通道复用）的同步 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 网络库使用，当网络操作时需要确保事务完成不被杀掉 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 选举使用，当应用有删除或者更新时需要重新选举，复用推送通道 -->
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_CHANGED" />
+    <uses-permission android:name="android.permission.BROADCAST_PACKAGE_REPLACED" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <!-- 补偿通道小米PUSH使用，不用可去除 -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 补偿通道GCM使用，不使用可去除 -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <!-- 允许监听启动完成事件 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 允许访问震动器 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 允许task重排序 -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- SD卡读取权限，用户写入离线定位数据 -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 允许应用读取低级别的系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
+    <uses-sdk android:minSdkVersion="14" />
+
+    <application
+        android:name="com.kekezu.kppw.MyApp"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_hoem_rmfw"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.1" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <activity
+            android:name="com.kekezu.kppw.activity.SplashActivity"
+            android:configChanges="keyboardHidden"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> 
+        </activity>
+        <activity
+            android:name="com.kekezu.kppw.activity.GuideActivity"
+            android:configChanges="keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.kekezu.kppw.activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kekezu.kppw.activity.MipcaActivityCapture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kekezu.kppw.activity.Login"
+            android:screenOrientation="portrait" />
+        <!-- 搜索 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Search"
+            android:screenOrientation="portrait" />
+        <!-- 任务搜索结果 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.SearchTaskResult"
+            android:screenOrientation="portrait" />
+        <!-- 搜索结果 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.SearchResult"
+            android:screenOrientation="portrait" />
+        <!-- 定位 -->
+        <activity
+            android:name="com.kekezu.kppw.baidulbs.ActivitySelectCity"
+            android:screenOrientation="portrait" >
+        </activity>
+        <!-- 任务发布第一步 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskRelease"
+            android:screenOrientation="portrait" />
+        <!-- 任务发布第二步 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskReleaseNext"
+            android:screenOrientation="portrait" />
+        <!-- 任务发布支付 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskReleasePay"
+            android:screenOrientation="portrait" />
+        <!-- 任务草稿箱 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserTaskDraft"
+            android:screenOrientation="portrait" />
+        <!-- 任务详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskDetails"
+            android:screenOrientation="portrait" />
+        <!-- 帮助 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserHelp"
+            android:screenOrientation="portrait" />
+        <!-- 个人信息 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserInformation"
+            android:screenOrientation="portrait" />
+        <!-- 意见 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserOpinion"
+            android:screenOrientation="portrait" />
+        <!-- 账号安全 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSecurity"
+            android:screenOrientation="portrait" />
+        <!-- 系统设置 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSet"
+            android:screenOrientation="portrait" />
+        <!-- 关于我们 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSetAbout"
+            android:screenOrientation="portrait" />
+        <!-- 绑定email -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserEmail"
+            android:screenOrientation="portrait" />
+        <!-- 注册 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Register"
+            android:screenOrientation="portrait" />
+        <!-- 注册2 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Register2"
+            android:screenOrientation="portrait" />
+        <!-- 重置密码 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.RetrievePassword1"
+            android:screenOrientation="portrait" />
+        <!-- 重置密码2 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.RetrievePassword2"
+            android:screenOrientation="portrait" />
+        <!-- 我的钱包 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWallet"
+            android:screenOrientation="portrait" />
+        <!-- 我的收支明细 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletDetail"
+            android:screenOrientation="portrait" />
+        <!-- 分类展示 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.IndexClassifyList"
+            android:screenOrientation="portrait" />
+        <!-- 提现选择 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.PresentChoice"
+            android:screenOrientation="portrait" />
+        <!-- 修改登录密码 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSecurityChangePassword"
+            android:screenOrientation="portrait" />
+        <!-- 修改钱包密码 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSecurityChangePasswordWallet"
+            android:screenOrientation="portrait" />
+        <!-- 设置支付密码 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.SetPayPassword"
+            android:screenOrientation="portrait" />
+        <!-- 身份认证 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserSecurityIdentity"
+            android:screenOrientation="portrait" />
+        <!-- 银行认证 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletBankList"
+            android:screenOrientation="portrait" />
+        <!-- 支付宝认证 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletAlipayList"
+            android:screenOrientation="portrait" />
+        <!-- 支付宝认证 确认金额 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletAlipayAuth"
+            android:screenOrientation="portrait" />
+        <!-- 银行卡提现 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.PresentChoiceBank"
+            android:screenOrientation="portrait" />
+        <!-- 支付宝提现 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.PresentChoiceAlipay"
+            android:screenOrientation="portrait" />
+        <!-- 添加银行卡 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletBankAdd"
+            android:screenOrientation="portrait" />
+        <!-- 银行卡绑定 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletBankDetail"
+            android:screenOrientation="portrait" />
+        <!-- 银行卡绑定 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletBankAuth"
+            android:screenOrientation="portrait" />
+        <!-- 行业分类 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Industry"
+            android:screenOrientation="portrait" />
+        <!-- 稿件详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskManuscriptDetails"
+            android:screenOrientation="portrait" />
+        <!-- 威客对雇主做评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.EvaluationEmployer"
+            android:screenOrientation="portrait" />
+        <!-- 雇主对威客做评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.EvaluationWitkey"
+            android:screenOrientation="portrait" />
+        <!-- 投稿 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Contribution"
+            android:screenOrientation="portrait" />
+        <!-- 申请维权 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.AppealRights"
+            android:screenOrientation="portrait" />
+        <!-- 协议交付 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.ProtocolDelivery"
+            android:screenOrientation="portrait" />
+        <!-- 我的任务 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserTask"
+            android:screenOrientation="portrait" />
+        <!-- 我的任务列表 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserTaskList"
+            android:screenOrientation="portrait" />
+        <!-- 我的收藏 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserCollection"
+            android:screenOrientation="portrait" />
+        <!-- 我的案例 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopCase"
+            android:screenOrientation="portrait" />
+        <!-- 案例详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopCaseDetails"
+            android:screenOrientation="portrait" />
+        <!-- 添加案例 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopCaseAdd"
+            android:screenOrientation="portrait" />
+        <!-- 图片上传 -->
+        <activity
+            android:name="com.kekezu.kppw.control.ImageClip"
+            android:screenOrientation="portrait" />
+        <!-- 添加案例 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletAlipayAdd"
+            android:screenOrientation="portrait" />
+        <!-- 威客雇主详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.WitkeyDetails"
+            android:screenOrientation="portrait" />
+        <!-- 威客的任务 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.WitkeyTask"
+            android:screenOrientation="portrait" />
+        <!-- 威客的交稿 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskManuscriptDelivery"
+            android:screenOrientation="portrait" />
+        <!-- 二级分类搜索结果 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.MoreResult"
+            android:screenOrientation="portrait" />
+
+        <!-- 系统消息 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.SystemMsg"
+            android:screenOrientation="portrait" />
+
+        <!-- 稿件交付 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskAgreementCreate"
+            android:screenOrientation="portrait" />
+        <!-- 稿件交付后的操作 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskPriceDetails"
+            android:screenOrientation="portrait" />
+
+        <!-- 协议 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.XieYi"
+            android:screenOrientation="portrait" />
+
+        <!-- 查看评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.Evaluate"
+            android:screenOrientation="portrait" />
+
+        <!-- 个人 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopManage"
+            android:screenOrientation="portrait" />
+
+        <!-- 个人 标签 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserInfoTag"
+            android:screenOrientation="portrait" />
+
+        <!-- 任务清单 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskBill"
+            android:screenOrientation="portrait" />
+
+        <!-- 提现 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserCashOut"
+            android:screenOrientation="portrait" />
+
+        <!-- 充值选择 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserWalletOutIn"
+            android:screenOrientation="portrait" />
+        <!-- 充值 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserCashIn"
+            android:screenOrientation="portrait" />
+        <!-- 店铺详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.ShopDetail"
+            android:screenOrientation="portrait" />
+        <!-- 未开店铺人才详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.ServiceDetail"
+            android:screenOrientation="portrait" />
+        <!-- 作品详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodDetail"
+            android:screenOrientation="portrait" />
+        <!-- 作品支付 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodPay"
+            android:screenOrientation="portrait" />
+        <!-- 作品内容 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.WorkContent"
+            android:screenOrientation="portrait" />
+        <!-- 作品评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.WorkEvaluate"
+            android:screenOrientation="portrait" />
+
+        <!-- 作品评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopCollection"
+            android:screenOrientation="portrait" />
+
+        <!-- 我的订单 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserOrder"
+            android:screenOrientation="portrait" />
+        <!-- 我的订单列表 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserOrderList"
+            android:screenOrientation="portrait" />
+
+        <!-- 我的店铺 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.MyShop"
+            android:screenOrientation="portrait" />
+
+        <!-- 店铺设置 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopSet"
+            android:screenOrientation="portrait" />
+
+        <!-- 店铺升级 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShopUpgrade"
+            android:screenOrientation="portrait" />
+        <!-- 雇佣 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodHire"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodHirePay"
+            android:screenOrientation="portrait" />
+        <!-- 订单服务详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserOrderServiceDetail"
+            android:screenOrientation="portrait" />
+
+        <!-- 雇佣-作品上传 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UploadWork"
+            android:screenOrientation="portrait" />
+
+        <!-- 雇佣维权 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskRights"
+            android:screenOrientation="portrait" />
+
+        <!-- 雇佣评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.OrderEvaluation"
+            android:screenOrientation="portrait" />
+
+        <!-- 我的店铺 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.UserShop"
+            android:screenOrientation="portrait" />
+
+        <!-- 我购买的商品详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodBuyDetail"
+            android:screenOrientation="portrait" />
+
+        <!-- 我卖出的商品详情 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.SaleGoodDetail"
+            android:screenOrientation="portrait" />
+
+        <!-- 作品评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.GoodsEvaluation"
+            android:screenOrientation="portrait" />
+        
+         <!-- 外部链接 -->
+        <activity
+            android:name="com.kekezu.kppw.ruihui.NavigationBar"
+            android:screenOrientation="portrait" >
+            
+           <!--  <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter> -->
+        </activity>
+
+        <!-- 查看作品评价 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.BuyEvaluateShow"
+            android:screenOrientation="portrait" />
+
+        <!-- 草稿箱任务发布 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.TaskRelease2"
+            android:screenOrientation="portrait" />
+
+        <!-- 聊天界面 -->
+        <activity
+            android:name="com.kekezu.kppw.activity.ChatActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fuqianla.paysdk.app.FuQianLaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="ONEPAY_APPKEY"
+            android:value="WlomS83GypBgn4vbkFgsOA" />
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.fuqianla.paysdk.wxapi.PaymentActivity"
+            android:launchMode="singleTop" />
+        
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize" >
+            <intent-filter>
+                <data android:scheme="tencent100371282" />
+
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <!-- 微信分享回调 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="57f9adac67e58ef45a00243d" >
+        </meta-data>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="kekezu" />
+    </application>
+
+</manifest>

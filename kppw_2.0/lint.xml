@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="HandlerLeak" severity="ignore" />
+    <issue id="InflateParams" severity="ignore" />
+    <issue id="NewApi" severity="ignore" />
+    <issue id="ResourceAsColor" severity="ignore" />
+    <issue id="RtlHardcoded">
+        <ignore path="res/layout/user_index.xml" />
+    </issue>
+    <issue id="ServiceCast" severity="ignore" />
+    <issue id="ShowToast" severity="ignore" />
+    <issue id="SimpleDateFormat" severity="ignore" />
+</lint>

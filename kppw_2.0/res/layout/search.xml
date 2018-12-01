@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="21dp" >
+
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="64dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/r_bg_edittext_3"
+                android:dropDownVerticalOffset="2dp"
+                android:gravity="center"
+                android:popupBackground="@color/main_bg"
+                android:spinnerMode="dropdown" />
+
+            <EditText
+                android:id="@+id/edit_search_keyword"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/r_bg_edittext_3_1"
+                android:ems="14"
+                android:hint="@string/search_keyword"
+                android:paddingLeft="4dp" />
+
+            <TextView
+                android:id="@+id/text_search_search"
+                android:layout_width="48dp"
+                android:layout_height="36dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:text="@string/search_in"
+                android:textColor="@color/header_bg" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:text="历史记录"
+            android:textColor="@color/light_gray9" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:scrollbars="none" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:background="@color/main_bg"
+            android:gravity="center"
+            android:text="清除历史记录"
+            android:textColor="@color/header_bg" />
+    </LinearLayout>
+
+</LinearLayout>
